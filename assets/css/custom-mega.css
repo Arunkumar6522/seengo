@@ -1,0 +1,226 @@
+/* custom-mega.css */
+/* Overrides for SeenGo new brand identity and dense marketplace layout */
+
+:root {
+  --color-brand-primary: #04112E; /* New Navy Blue from Logo */
+  --color-brand-secondary: #6B4C3B; /* Brown/Bronze */
+  --color-white: #FFFFFF;
+  
+  /* Additional UI Colors for dense layout */
+  --color-flash-red: #E63946;
+  --color-sale-orange: #F4A261;
+}
+
+/* Topbar Overrides */
+.topbar, .topbar.top-brand-2 {
+  background-color: var(--color-brand-primary) !important;
+}
+.topbar .color-brand-3, .topbar .dropdown-right {
+  color: #E2E8F0 !important; /* Lighter text for dark background */
+}
+.topbar .color-success {
+  color: var(--color-sale-orange) !important; /* Standout color for success text */
+}
+
+/* Color Overrides */
+.color-brand-1, .color-brand-2, .color-brand-3 {
+  color: var(--color-brand-primary) !important;
+}
+
+.bg-brand-1, .bg-brand-2 {
+  background-color: var(--color-brand-primary) !important;
+}
+
+.btn-cart, .btn-buy, .btn.dropdown-toggle {
+  background-color: var(--color-brand-primary) !important;
+  color: var(--color-white) !important;
+  border-color: var(--color-brand-primary) !important;
+}
+
+.btn-cart:hover, .btn-buy:hover, .btn.dropdown-toggle:hover {
+  background-color: var(--color-brand-secondary) !important;
+  border-color: var(--color-brand-secondary) !important;
+}
+
+/* Secondary Button Overrides */
+.bg-brand-2 {
+  background-color: var(--color-brand-secondary) !important;
+}
+
+/* Dense Layout Overrides */
+.list-products-5 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 15px;
+}
+
+.list-products-5 .card-grid-style-3,
+.list-products-5 .card-grid-style-2 {
+  width: 100% !important;
+  margin-bottom: 0;
+}
+
+.card-grid-style-3 .image-box img,
+.card-grid-style-2 .image-box img {
+  max-height: 150px;
+  object-fit: contain;
+}
+
+.card-grid-style-3 .info-right,
+.card-grid-style-2 .info-right {
+  padding: 10px;
+}
+
+.card-grid-style-3 .info-right .font-sm-bold,
+.card-grid-style-2 .info-right .font-xs-bold {
+  font-size: 13px !important;
+  line-height: 1.2 !important;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+/* Badges */
+.badge-flash {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: var(--color-flash-red);
+  color: white;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: bold;
+  z-index: 2;
+}
+
+/* Flash Deals Section */
+.flash-deals-banner {
+  background: linear-gradient(135deg, var(--color-brand-primary) 0%, var(--color-brand-secondary) 100%);
+  border-radius: 12px;
+  padding: 20px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.flash-deals-countdown {
+  display: flex;
+  gap: 10px;
+}
+
+.flash-deals-countdown .time-box {
+  background: rgba(255,255,255,0.2);
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* Auth Modal Styles */
+.auth-overlay {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0,0,0,0.7);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+
+.auth-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.auth-modal {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.auth-modal h4 {
+  color: var(--color-brand-primary);
+  margin-bottom: 15px;
+}
+
+.auth-modal p {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.auth-modal .btn-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+/* Mobile Responsiveness Tweaks */
+@media (max-width: 768px) {
+  /* Ensure grids always show at least 2 items on narrow mobile screens (like Temu/Shein) */
+  .list-products-5 {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  
+  /* Stack the Flash Deals banner nicely on mobile */
+  .flash-deals-banner {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+}
+
+/* Minimalist Product Suggestions (.card-minimal) */
+.card-minimal {
+  text-align: center;
+  padding: 10px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-radius: 8px;
+  background: #fff;
+}
+.card-minimal:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+.card-minimal .image-box {
+  margin-bottom: 15px;
+}
+.card-minimal .image-box img {
+  max-width: 100%;
+  height: 140px;
+  object-fit: contain;
+}
+.card-minimal .info-right {
+  padding: 0;
+}
+.card-minimal .title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-brand-primary);
+  margin-bottom: 5px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.3;
+}
+.card-minimal .price {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-brand-secondary);
+}
+.card-minimal a {
+  text-decoration: none;
+}
