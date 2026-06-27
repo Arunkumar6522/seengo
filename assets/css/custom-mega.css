@@ -224,3 +224,75 @@
 .card-minimal a {
   text-decoration: none;
 }
+
+/* Eradicate "Old Blue" on all internal buttons/icons */
+.btn-wishlist, .btn-trend, .btn-quickview, .btn-compare {
+  color: var(--color-brand-primary) !important;
+}
+
+.btn-wishlist:hover, .btn-trend:hover, .btn-quickview:hover, .btn-compare:hover {
+  background-color: var(--color-brand-primary) !important;
+  color: var(--color-white) !important;
+  border-color: var(--color-brand-primary) !important;
+}
+
+/* Also ensure any SVG icons inside these buttons turn white on hover or use the primary color */
+.btn-wishlist:hover::before, .btn-trend:hover::before, .btn-quickview:hover::before {
+  filter: brightness(0) invert(1) !important;
+}
+
+.btn-gray {
+  background-color: #E2E8F0 !important;
+  color: var(--color-brand-primary) !important;
+}
+.btn-gray:hover {
+  background-color: var(--color-brand-primary) !important;
+  color: var(--color-white) !important;
+}
+
+/* Fix pagination active state if it uses old blue */
+.pagination .page-item.active .page-link {
+  background-color: var(--color-brand-primary) !important;
+  border-color: var(--color-brand-primary) !important;
+}
+
+/* Header Icons & Notification Badges Override */
+.header-shop .icon-list, 
+.header-shop .icon-list span:not(.number-item) {
+  color: var(--color-brand-primary) !important;
+}
+
+.number-item {
+  background-color: var(--color-brand-secondary) !important;
+  color: var(--color-white) !important;
+}
+
+/* Category Cards */
+.card-category:hover {
+  background: linear-gradient(135deg, #04112E 0%, #6B4C3B 100%) !important;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(4,17,46,0.2);
+}
+.card-category:hover h6 {
+  color: #fff !important;
+}
+
+/* Logo Size — compact header like Microless */
+.header-logo img {
+  height: 60px !important;
+  width: auto !important;
+}
+.mobile-logo img {
+  height: 50px !important;
+  width: auto !important;
+}
+
+/* Bigger Search Bar */
+.form-search {
+  height: 50px !important;
+}
+.box-keysearch input.form-control {
+  height: 50px !important;
+  font-size: 15px !important;
+  padding: 0 16px !important;
+}

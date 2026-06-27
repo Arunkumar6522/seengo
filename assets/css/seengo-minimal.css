@@ -1,0 +1,3 @@
+﻿
+/* SeenGo Minimal UI - Design System */
+:root{--sg-white:#fff;--sg-black:#111;--sg-accent:#2563eb;--sg-accent-hover:#1d4ed8;--sg-border:#e5e7eb;--sg-bg:#f9fafb;--sg-muted:#6b7280;--sg-red:#ef4444;--sg-gold:#f59e0b;--sg-radius:8px;--sg-shadow:0 1px 3px rgba(0,0,0,.08),0 1px 2px rgba(0,0,0,.05);--sg-shadow-md:0 4px 16px rgba(0,0,0,.10);--sg-font:'DM Sans',sans-serif}
