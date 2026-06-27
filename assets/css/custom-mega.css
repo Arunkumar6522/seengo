@@ -277,13 +277,13 @@
   color: #fff !important;
 }
 
-/* Logo Size — compact header like Microless */
+/* Logo Size */
 .header-logo img {
-  height: 60px !important;
+  height: 130px !important;
   width: auto !important;
 }
 .mobile-logo img {
-  height: 50px !important;
+  height: 90px !important;
   width: auto !important;
 }
 

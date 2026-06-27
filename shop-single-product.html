@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
@@ -9,7 +9,7 @@
     <meta name="description" content="Index page">
     <meta name="keywords" content="index, page">
     <meta name="author" content="">
-    <link href="assets/css/style.css?v=3.0.0" rel="stylesheet">
+    <link href="assets/css/style.css?v=3.0.0" rel="stylesheet"><link href="assets/css/seengo-minimal.css" rel="stylesheet">
     <link href="assets/css/custom-mega.css" rel="stylesheet">
     <title>Single Product - Seengo Dubai Electronics</title>
   </head>
@@ -345,7 +345,7 @@
                   <div class="input-quantity">
                     <input class="font-xl color-brand-3" type="text" value="1"><span class="minus-cart"></span><span class="plus-cart"></span>
                   </div>
-                  <div class="button-buy"><a class="btn btn-cart" href="shop-cart.html">Add to cart</a><a class="btn btn-buy" href="shop-checkout.html">Buy now</a></div>
+                  <div class="button-buy"><a class="btn btn-cart" href="#" onclick="sgRequireLogin(event,'shop-cart.html')">Add to Cart</a><a class="btn btn-buy" href="#" onclick="sgRequireLogin(event,'shop-cart.html')">Buy Now</a></div>
                 </div>
               </div>
               <div class="info-product mt-40">
@@ -371,7 +371,7 @@
             </div>
             <div class="price-bought">
               <h3 class="color-brand-3 mr-10">AED 10,483</h3><span class="font-lg color-gray-900">(3 items)</span>
-              <div class="box-btn-add-cart"><a class="btn btn-cart" href="shop-cart.html">Add To Cart</a></div>
+              <div class="box-btn-add-cart"><a class="btn btn-cart" href="#" onclick="sgRequireLogin(event,'shop-cart.html')">Add to Cart</a></div>
             </div>
           </div>
           <label class="cb-container-2">
@@ -1003,7 +1003,7 @@
                         <div class="input-quantity">
                           <input class="font-xl color-brand-3" type="text" value="1"><span class="minus-cart"></span><span class="plus-cart"></span>
                         </div>
-                        <div class="button-buy"><a class="btn btn-cart" href="shop-cart.html">Add to cart</a><a class="btn btn-buy" href="shop-checkout.html">Buy now</a></div>
+                        <div class="button-buy"><a class="btn btn-cart" href="#" onclick="sgRequireLogin(event,'shop-cart.html')">Add to Cart</a><a class="btn btn-buy" href="#" onclick="sgRequireLogin(event,'shop-cart.html')">Buy Now</a></div>
                       </div>
                     </div>
                   </div>
@@ -1036,5 +1036,5 @@
     <script src="assets/js/main.js?v=3.0.0"></script>
     <script src="assets/js/shop.js?v=1.2.1"></script>
       <script src="assets/js/custom-auth.js"></script>
-  </body>
+  <div class="modal fade" id="sgLoginModal" tabindex="-1" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" style="max-width:420px;"><div class="modal-content" style="border:none;border-radius:16px;box-shadow:0 20px 60px rgba(0,0,0,0.15);"><div class="modal-body" style="padding:36px 40px;position:relative;"><button type="button" class="btn-close" data-bs-dismiss="modal" style="position:absolute;top:16px;right:16px;"></button><div style="text-align:center;margin-bottom:20px;"><img src="assets/imgs/ChatGPT Image Jun 26, 2026, 11_08_43 PM.png" alt="SeenGo" style="height:40px;width:auto;display:inline-block;margin-bottom:12px;"><h4 style="font-size:20px;font-weight:700;margin:0 0 4px;">Welcome to SeenGo</h4><p style="font-size:13px;color:#888;margin:0;">Sign in to continue</p></div><form id="sgLoginForm"><div style="margin-bottom:14px;"><label style="display:block;font-size:13px;font-weight:600;margin-bottom:6px;">Email</label><input type="email" class="form-control" placeholder="your@email.com" style="border:1px solid #e0e0e0;border-radius:8px;padding:10px 14px;width:100%;font-size:14px;"></div><div style="margin-bottom:16px;"><label style="display:block;font-size:13px;font-weight:600;margin-bottom:6px;">Password</label><input type="password" class="form-control" placeholder="Password" style="border:1px solid #e0e0e0;border-radius:8px;padding:10px 14px;width:100%;font-size:14px;"></div><button type="submit" class="sg-btn-primary">Login</button></form><div style="display:flex;align-items:center;gap:12px;margin:16px 0;color:#bbb;font-size:12px;"><span style="flex:1;height:1px;background:#e9ecef;"></span>or<span style="flex:1;height:1px;background:#e9ecef;"></span></div><a id="sgGuestBtn" style="display:block;text-align:center;font-size:13px;color:#2563eb;cursor:pointer;text-decoration:underline;">Continue as Guest</a></div></div></div></div><script>var _sgDest="shop-cart.html";function sgRequireLogin(e,dest){e.preventDefault();_sgDest=dest||"shop-cart.html";new bootstrap.Modal(document.getElementById("sgLoginModal")).show();}document.addEventListener("DOMContentLoaded",function(){var lf=document.getElementById("sgLoginForm");if(lf)lf.addEventListener("submit",function(e){e.preventDefault();bootstrap.Modal.getInstance(document.getElementById("sgLoginModal")).hide();window.location.href=_sgDest;});var gb=document.getElementById("sgGuestBtn");if(gb)gb.addEventListener("click",function(){bootstrap.Modal.getInstance(document.getElementById("sgLoginModal")).hide();window.location.href=_sgDest;});});</script></body>
 </html>
